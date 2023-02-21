@@ -13,6 +13,7 @@ export default function Details(props) {
     <Button title='ir a informacion ' 
     onPress={()=>navigation.navigate('information')}
     />
+    
 
     </View>
   )

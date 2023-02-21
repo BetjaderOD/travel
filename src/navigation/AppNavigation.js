@@ -5,22 +5,30 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Index from '../screens/Index';
 import Details from '../screens/Details';
 import Information from '../screens/Information';
+import LoginSreen from '../screens/LoginSreen';
+import IndexStack from './IndexStack';
+import DetailsStack from './DetailsStack';
 
 
 const Tab = createBottomTabNavigator();
 export default function AppNavigation() {
   return (
-    <Tab.Navigator>
-        <Tab.Screen component={Index} 
+    <Tab.Navigator screenOptions={{headerShown:false}}>
+        <Tab.Screen component={IndexStack} 
             name='index'
-            options={{title:"Inicio"}}
+            options={{title:"Inicio", 
+            // headerShown:false
+          }}
             />
-            <Tab.Screen component={Details} name='details' options={{
+            <Tab.Screen component={DetailsStack} name='details' options={{
         title:'Detalles'
         }}/>
         <Tab.Screen component={Information} name='information' options={{
-        title:'Information'
+        title:'Information' ,headerShown:true
     }}/>
+    {/* <Tab.Screen component={LoginSreen} name='login' options={{
+        title:'Inicio Sesión'
+    }}/> */}
     </Tab.Navigator>
     
   )

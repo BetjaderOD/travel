@@ -14,6 +14,11 @@ export default function Index(props) {
         title="ir a informacion"
         onPress={() => navigation.navigate("information")}
         />
+        <Button
+        title="ir a login"
+        onPress={() => navigation.navigate("details", {screen:'login'})}
+        />
+
     </View>
     );
 }
