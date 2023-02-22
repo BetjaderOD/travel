@@ -11,7 +11,7 @@ export default function IndexStack() {
         <Stack.Screen 
         name='indexs'
         component={Index}
-        options={{title:'inicio jhon'}}
+        options={{title:'inicio '}}
         />
          <Stack.Screen 
         name='login'
