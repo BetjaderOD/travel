@@ -13,11 +13,7 @@ export default function IndexStack() {
         component={Details}
         options={{title:'Detalles jhon'}}
         />
-         <Stack.Screen 
-        name='login'
-        component={LoginSreen}
-        options={{title:'Inicio Sesión'}}
-        />
+         
    </Stack.Navigator>
   )
 }

@@ -1,10 +1,31 @@
 import { Button, StyleSheet, Text, View,  } from "react-native";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import {getAuth, onAuthStateChanged} from 'firebase/auth'
+import LoginSreen from "./LoginSreen";
+import Loading from "../components/common/Loading";
+
+
+
 
 export default function Index(props) {
-    console.log(props);
     const { navigation } = props;
-    return (
+    const [session, setSession] = useState(null)
+    useEffect(() => {
+      const auth = getAuth();
+      onAuthStateChanged(auth ,(user)=>{
+        console.log(user);
+       // setSession(user ? true : false)
+      })
+  
+    
+    }, [])
+    if (session == null) {
+        return<Loading  text={'validando Sesion'}/>
+    }
+    
+
+
+    return session ?(
     <View> 
         <Button
         title="ir a detalles "
@@ -20,5 +41,5 @@ export default function Index(props) {
         />
 
     </View>
-    );
+    ) : <LoginSreen/>
 }
