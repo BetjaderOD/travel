@@ -14,7 +14,7 @@ export default function Index(props) {
       const auth = getAuth();
       onAuthStateChanged(auth ,(user)=>{
         console.log(user);
-       // setSession(user ? true : false)
+        setSession(user ? true : false)
       })
   
     
