@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
-import { Image } from 'react-native-elements'
+import { Button, Image } from 'react-native-elements'
 import { useNavigation } from '@react-navigation/native'
 
 export default function LoginSreen() {
@@ -15,7 +15,7 @@ export default function LoginSreen() {
       <Image source={require('../../assets/img/lavine.png')} style={styles.logo} />
       <Text>Formulario de Login</Text>
       <View>
-        <Text onPress={irAResgistro()} >Registrate</Text>
+        <Text onPress={irAResgistro} >Registrate</Text>
       </View>
     </View>
   )

@@ -8,7 +8,7 @@ export default function RegisterScreen() {
   return (
     <View>
          <Image source={require('../../assets/img/lavine.png')} style={styles.logo} />
-      <Text>RegisterScreen</Text>
+  
       <View style={styles.viewForm}>
         <RegisterForm/>
       </View>
