@@ -9,6 +9,7 @@ import Information from '../screens/Information';
 import LoginSreen from '../screens/LoginSreen';
 import IndexStack from './IndexStack';
 import DetailsStack from './DetailsStack';
+import ProfileStack from './ProfileStack';
 
 
 const Tab = createBottomTabNavigator();
@@ -31,8 +32,8 @@ export default function AppNavigation() {
             <Tab.Screen component={DetailsStack} name='details' options={{
         title:'Detalles'
         }}/>
-        <Tab.Screen component={Information} name='information' options={{
-        title:'Information' ,headerShown:true
+        <Tab.Screen component={ProfileStack} name='profile' options={{
+        title:'Perfil' ,headerShown:true
     }}/>
     {/* <Tab.Screen component={LoginSreen} name='login' options={{
         title:'Inicio Sesión'
@@ -50,8 +51,8 @@ function showIcons(route, color, size) {
     icono='details'
     
   }
-  if (route.name=='information') {
-    icono='information'
+  if (route.name=='profile') {
+    icono='account-outline'
   }
   return(
     <Icon   
